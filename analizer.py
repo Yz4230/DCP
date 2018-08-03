@@ -21,7 +21,7 @@ def list2str(lst):
     string = ''.join(lst)
     return string
 
-TRG_IMG = cv2.imread('c.png')
+TRG_IMG = cv2.imread('cp.png')
 
 HEIGHT, WIDTH = TRG_IMG.shape[:2]
 

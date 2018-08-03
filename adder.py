@@ -1,6 +1,18 @@
 import cv2
 import numpy as np
 
+def cnbin(img1, img2):
+    base_img = img1
+    ps_img = img2
+    img_height, img_width, img_cnl = base_img.shape
+    f_img_height = img_height * 2
+
+    cnb_img = np.zeros((f_img_height, img_width, img_cnl), 'uint8')
+    cnb_img[0:img_height, 0:img_width] = base_img
+    cnb_img[img_height:f_img_height, 0:img_width] = ps_img
+
+    return cnb_img
+
 def read_text(filename):
     file = open(filename, 'r')
     string = file.read()
@@ -76,4 +88,5 @@ FILENAME = '0.png'
 BASE_IMG = cv2.imread(FILENAME)
 PS_IMG = bin2img(ADDING_TEXT, FILENAME)
 
-cv2.imwrite(f'{FILENAME[:-4]}_e.{FILENAME[-4:]}', PS_IMG)
+CP_IMG = cnbin(BASE_IMG, PS_IMG)
+cv2.imwrite('cp.png', CP_IMG)
