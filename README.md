@@ -1,7 +1,7 @@
-Thank you for visiting!
+*Thank you for visiting!*
 I'm Japanese, so my English may be not good.
 
-<Dev-Environment>
+## Dev-Environment
 Python 3.6.5
 numpy 1.14.5
 opencv-python 3.4.2.16
@@ -9,17 +9,12 @@ opencv-python 3.4.2.16
 You can hide your text-data in photo!
 あなたはテキストデータを写真の中へ隠すことができます!
 
-<English>
-
 ### How to use
-
 1. Download and expand to your directry.
 2. Prepare '0.png'. This photo is you want the photo to contain your text-data.
 3. Prepare 'data.txt'. This textfile contains the text what you want to insert to the photo.
 4. Run 'adder.py', 'conbiner.py' in this order.
 5. You can recover your text by running 'analizer.py'. And text-in-photo is saved as 'text.txt'.
-
-<日本語>
 
 ### 使い方
 1. ダウンロードして任意のディレクトリに展開します。
